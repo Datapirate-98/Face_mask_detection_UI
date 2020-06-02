@@ -19,7 +19,7 @@ face mask detector with complete USER INTERFACE using Tkinter
 
 for experimenting with tarining model look up **Face_Mask_detection_training.py**.
 
-downloaded the dataset from Prajna Bhandary github(INCLUDED THE DATASET IN THE REPO)
+downloaded the dataset from Prajna Bhandary github(link - "https://github.com/prajnasb/observations/tree/master/experiements")
 
 used the keras, tensorflow API for training the neural networks with a good accuracy of detection.
 
