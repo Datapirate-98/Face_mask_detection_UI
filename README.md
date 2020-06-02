@@ -11,7 +11,9 @@ face mask detector with complete USER INTERFACE using Tkinter
 
 ## pip install requirments.txt
 
-2. Then Run the **face_mask_detection_UI.py file**.
+2. Then Run the **face_mask_detection_training.py**
+
+3. Then Run the **face_mask_detection_UI.py file**.
 
 # Thats IT!
 
