@@ -57,7 +57,7 @@ np.save("target", target)
 
 class myCallback(tf.keras.callbacks.Callback):
   def on_epoch_end(self, epoch, logs={}):
-    if(logs.get('accuracy')>0.70): # I kept it 70% acc because i got best result in it u can try experimenting
+    if(logs.get('accuracy')>0.99):
       print("\nReached 99% accuracy so cancelling training!")
       self.model.stop_training = True
 
