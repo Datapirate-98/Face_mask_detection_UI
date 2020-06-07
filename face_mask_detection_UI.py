@@ -62,44 +62,7 @@ def destroy_Toplevel1():
 class Toplevel1:
 
     def detect_mask(self):
-
-        data_path='data'
-        category_dir = os.listdir(data_path) #it  lists outs the dirs in data
-#print(category_dir)
-        labels_dir = [i for i in range(len(category_dir))] # I have labeled the dirs as "0" and "1"
-#print(labels_dir)
-        labels_dict = dict(zip(category_dir, labels_dir)) # creating a dictionay of cat and lab
-        #print(labels_dict)
-
-        data = []
-        target = []
-
-        for cat in category_dir:
-          cat_path = os.path.join(data_path, cat) #it returns the category path in cat folder
-    #print(cat_path)
-          img_names = os.listdir(cat_path)
-    #print(img_names)
-    
-        for name in img_names:
-          img_path = os.path.join(cat_path, name)
-        #print(img_path)
-          img = cv2.imread(img_path)
         
-          grey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-          resize = cv2.resize(grey, (128, 128))
-          data.append(resize)
-          target.append(labels_dict[cat])
-        
-        data = np.array(data)/255.0
-        data = np.reshape(data, (data.shape[0], 128, 128, 1))
-        #print(data)
-        target = np.array(target)
-        target = np_utils.to_categorical(target)
-
-        np.save("data", data)
-        np.save("target", target)
-
-
         model = tf.keras.models.load_model("masked.h5")
 
         classifier=cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
