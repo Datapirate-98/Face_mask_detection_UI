@@ -113,7 +113,7 @@ classifier=cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
 source=cv2.VideoCapture(0)
 
-label_dict={0:"without_mask",1:"with_mask"}
+labels_dict={0:"without_mask",1:"with_mask"}
 color_dict={0:(0,0,255),1:(0,255,0)}
 
 
